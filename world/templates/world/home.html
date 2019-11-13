@@ -9,25 +9,25 @@
 
   <style>
     #blogimage {
-      width: 200px;
+      width: 300px;
     }
   </style>
   <body>
     <h1>Testing</h1>
 
 <!-- remember to add .all to call the object in a for loop  -->
-      <!-- {% for blog in blogs.all %} -->
+      {% for world in worlds.all %}
       <div class="container">
 
       <div class="media">
-        <img src="" id="blogimage" class="align-self-start mr-3" alt="Image Placeholder">
+        <img src="{{ world.image.url }}" id="blogimage" class="align-self-start mr-3" alt="...">
         <div class="media-body">
-          <h5 class="mt-0">Title Placeholder</h5>
+          <h5>{{ world.title }}</h5>
         </div>
       </div>
       </div>
 
-      <!-- {% endfor %} -->
+      {% endfor %}
 
 
 

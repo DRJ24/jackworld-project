@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'jackworld.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'jackworlddb',
+        'USER': 'postgres',
+        'PASSWORD': 'Sandy123',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -119,3 +123,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# define where your static files will be collected
+# It will be `absolute/path/to/demo3/static`
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# keep it empty for the moment
+STATICFILES_DIRS = []
+
+
+MEDIA_URL = '/media/'
+# define where your static files will be collected
+# It will be `absolute/path/to/demo3/static`
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# keep it empty for the moment
