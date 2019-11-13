@@ -135,3 +135,11 @@ MEDIA_URL = '/media/'
 # It will be `absolute/path/to/demo3/static`
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # keep it empty for the moment
+
+
+
+
+try:
+	from .local_settings import *
+except ImportError:
+	pass
